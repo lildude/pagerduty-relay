@@ -66,15 +66,15 @@ As we're not using any form of authentication, you'll need to generate a long ra
     Set the `DEBUG` environment variable to a Requestb.in URL to test without sending to PagerDuty.  You can optionally leave off the `PAGERDUTY_SERVICE_KEY` environment variable if you're not going to test PagerDuty integration.
 
 
-## Test it:
+## Test it
 
-    On Heroku:
+- On Heroku:
 
     ```
     curl -X POST "http://[something].herokuapp.com/pagerduty?token=${PAGERDUTY_RELAY_TOKEN}" -d id=123456' -d 'org=My org.com' -d 'title=My GHE is broken'
     ```
 
-    Locally:
+- Locally:
 
     ```
     curl -X POST "http://127.0.0.1:4567/pagerduty?token=${PAGERDUTY_RELAY_TOKEN}" -d id=123456' -d 'org=My org.com' -d 'title=My GHE is broken'
